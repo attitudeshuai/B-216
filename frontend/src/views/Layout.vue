@@ -48,10 +48,14 @@
           <el-menu-item index="/fee/standards" v-if="['admin', 'staff'].includes(user?.role)">费用标准</el-menu-item>
         </el-sub-menu>
 
-        <el-menu-item index="/maintenance">
-          <el-icon><Tools /></el-icon>
-          <span>维修管理</span>
-        </el-menu-item>
+        <el-sub-menu index="/maintenance">
+          <template #title>
+            <el-icon><Tools /></el-icon>
+            <span>维修管理</span>
+          </template>
+          <el-menu-item index="/maintenance/submit" v-if="user?.role === 'student'">维修申报</el-menu-item>
+          <el-menu-item index="/maintenance/manage" v-if="['admin', 'staff'].includes(user?.role)">维修处理</el-menu-item>
+        </el-sub-menu>
 
         <el-menu-item index="/safety" v-if="['admin', 'staff'].includes(user?.role)">
           <el-icon><Lock /></el-icon>
