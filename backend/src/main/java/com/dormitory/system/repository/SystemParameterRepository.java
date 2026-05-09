@@ -1,0 +1,9 @@
+package com.dormitory.system.repository;
+
+import com.dormitory.system.entity.SystemParameter;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+
+public interface SystemParameterRepository extends JpaRepository<SystemParameter, Long> {
+    Optional<SystemParameter> findByParamKey(String paramKey);
+}

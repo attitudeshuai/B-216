@@ -1,0 +1,173 @@
+:root {
+  --el-color-primary: #409eff;
+  --el-color-success: #67c23a;
+  --el-color-warning: #e6a23c;
+  --el-color-danger: #f56c6c;
+  --el-color-info: #909399;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #303133;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #909399; 
+}
+
+/* Global Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Helper Classes */
+.mt-4 {
+  margin-top: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Element Plus Overrides for Modern Style */
+
+/* Card Styling - Match Login */
+.el-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.el-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.el-card__header {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Table Styling */
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --el-table-header-bg-color: #f5f7fa;
+}
+
+.el-table th.el-table__cell {
+  background-color: #f5f7fa;
+  color: #606266;
+  font-weight: 600;
+  height: 50px;
+}
+
+/* Button Styling */
+.el-button {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.el-button:not(.is-circle):not(.is-text) {
+  padding: 8px 16px;
+}
+
+.el-button--primary {
+  box-shadow: 0 2px 6px rgba(64, 158, 255, 0.3);
+}
+
+.el-button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(64, 158, 255, 0.4);
+}
+
+.el-button--danger {
+  box-shadow: 0 2px 6px rgba(245, 108, 108, 0.3);
+}
+
+/* Input Styling */
+.el-input__wrapper {
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #dcdfe6 inset;
+  padding: 4px 11px;
+}
+
+.el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px #c0c4cc inset;
+}
+
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #409eff inset !important;
+}
+
+/* Dialog Styling */
+.el-dialog {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.el-dialog__header {
+  margin-right: 0;
+  background: #f5f7fa;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.el-dialog__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.el-dialog__body {
+  padding: 30px 20px;
+}
+
+.el-dialog__footer {
+  padding: 15px 20px;
+  background: #f9fafc;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Pagination */
+.el-pagination {
+  justify-content: flex-end;
+  margin-top: 20px;
+}

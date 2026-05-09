@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dormitory_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&useUnicode=true&connectionCollation=utf8mb4_unicode_ci&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: Asia/Shanghai
+    locale: zh_CN
+
+# Time format config
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
