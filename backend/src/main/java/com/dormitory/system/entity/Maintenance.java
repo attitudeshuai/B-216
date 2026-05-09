@@ -17,16 +17,23 @@ public class Maintenance {
     @JoinColumn(name = "student_id")
     private User student;
 
+    @Column(nullable = false)
     private String title;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
-    private String emergencyLevel; // 一般, 紧急
-    private String status; // 待处理, 处理中, 已完成
-    
+
+    @Column(nullable = false)
+    private String faultType;
+
+    @Column(nullable = false)
+    private String status;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime reportTime;
-    
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime completeTime;
-    
+
     private String result;
 }

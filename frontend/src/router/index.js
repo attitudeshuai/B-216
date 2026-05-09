@@ -11,7 +11,8 @@ import Application from '../views/allocation/Application.vue'
 import AllocManage from '../views/allocation/Manage.vue'
 import FeeStandards from '../views/fee/Standards.vue'
 import FeeList from '../views/fee/List.vue'
-import MaintenanceList from '../views/maintenance/List.vue'
+import MaintenanceApply from '../views/maintenance/Apply.vue'
+import MaintenanceManage from '../views/maintenance/Manage.vue'
 import SafetyList from '../views/safety/List.vue'
 import AttendanceList from '../views/attendance/List.vue'
 import HygieneList from '../views/hygiene/List.vue'
@@ -47,7 +48,8 @@ const routes = [
       { path: 'fee/list', name: 'FeeList', component: FeeList },
       
       // Maintenance
-      { path: 'maintenance', name: 'Maintenance', component: MaintenanceList },
+      { path: 'maintenance/apply', name: 'MaintenanceApply', component: MaintenanceApply },
+      { path: 'maintenance/manage', name: 'MaintenanceManage', component: MaintenanceManage },
       
       // Safety
       { path: 'safety', name: 'Safety', component: SafetyList },

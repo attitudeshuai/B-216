@@ -14,7 +14,6 @@ public class DormService {
     @Autowired private RoomRepository roomRepository;
     @Autowired private AllocationRepository allocationRepository;
     @Autowired private FeeRepository feeRepository;
-    @Autowired private MaintenanceRepository maintenanceRepository;
     @Autowired private NoticeRepository noticeRepository;
     @Autowired private SafetyRecordRepository safetyRecordRepository;
     @Autowired private HygieneRepository hygieneRepository;
@@ -42,10 +41,6 @@ public class DormService {
     // Fees
     public List<Fee> getAllFees() { return feeRepository.findAll(); }
     public Fee saveFee(Fee f) { return feeRepository.save(f); }
-
-    // Maintenance
-    public List<Maintenance> getAllMaintenances() { return maintenanceRepository.findAll(); }
-    public Maintenance saveMaintenance(Maintenance m) { return maintenanceRepository.save(m); }
 
     // Notices
     public List<Notice> getAllNotices() { return noticeRepository.findAll(); }
