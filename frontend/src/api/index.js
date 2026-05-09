@@ -47,10 +47,11 @@ export const updateFeeStandard = (id, data) => request.put(`/fee-standards/${id}
 export const deleteFeeStandard = (id) => request.delete(`/fee-standards/${id}`)
 
 // Maintenance
-export const getMaintenances = () => request.get('/maintenances')
-export const getMyMaintenances = (studentId) => request.get(`/maintenances/student/${studentId}`)
-export const createMaintenance = (data) => request.post('/maintenances', data)
+export const getMaintenances = (status) => request.get('/maintenances', { params: { status } })
+export const getMyMaintenances = (studentId, status) => request.get(`/maintenances/student/${studentId}`, { params: { status } })
+export const createMaintenance = (data, studentId) => request.post('/maintenances', data, { params: { studentId } })
 export const updateMaintenance = (id, data) => request.put(`/maintenances/${id}`, data)
+export const updateMaintenanceStatus = (id, status) => request.put(`/maintenances/${id}/status`, null, { params: { status } })
 export const deleteMaintenance = (id) => request.delete(`/maintenances/${id}`)
 
 // Safety
