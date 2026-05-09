@@ -51,6 +51,7 @@ export const getMaintenances = () => request.get('/maintenances')
 export const getMyMaintenances = (studentId) => request.get(`/maintenances/student/${studentId}`)
 export const createMaintenance = (data) => request.post('/maintenances', data)
 export const updateMaintenance = (id, data) => request.put(`/maintenances/${id}`, data)
+export const updateMaintenanceStatus = (id, status) => request.put(`/maintenances/${id}/status`, null, { params: { status } })
 export const deleteMaintenance = (id) => request.delete(`/maintenances/${id}`)
 
 // Safety
