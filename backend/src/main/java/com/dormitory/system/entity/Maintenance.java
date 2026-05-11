@@ -19,14 +19,15 @@ public class Maintenance {
 
     private String title;
     private String description;
-    private String emergencyLevel; // 一般, 紧急
-    private String status; // 待处理, 处理中, 已完成
+    private String faultType;
+    private String emergencyLevel;
+    private String status;
     
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime reportTime;
     
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime completeTime;
+    private LocalDateTime finishTime;
     
     private String result;
 }
